@@ -59,7 +59,7 @@ const pages = {
           target: false
         },
         {
-          id: 'register3', //สร้างไอดีใหม่ด้วยนะ
+          id: 'register32', //สร้างไอดีใหม่ด้วยนะ
           title: 'ยื่นสอบก้าวหน้า(CSB02)',
           type: 'item',
           url: '/sample-page/CSB02', 
@@ -75,14 +75,14 @@ const pages = {
 
       children: [
         {
-          id: 'login3', //สร้างไอดีใหม่ด้วยนะ
+          id: 'login31', //สร้างไอดีใหม่ด้วยนะ
           title: 'ตรวจสอบคุณสมบัติยื่นสอบ Special Project 2',
           type: 'item',
           url: '/sample-page/UploadLinkTranscript2', 
           target: false
         },
         {
-          id: 'register3', //สร้างไอดีใหม่ด้วยนะ
+          id: 'register33', //สร้างไอดีใหม่ด้วยนะ
           title: 'ยื่นสอบป้องกัน(CSB03)',
           type: 'item',
           url: '/sample-page/CSB03', 
@@ -93,6 +93,14 @@ const pages = {
     {
       id: 'sample-page',
       title: 'ตรวจสอบสถานะต่างๆ',
+      type: 'item',
+      url: '/sample-page',
+      icon: icons.IconBrandChrome,
+      breadcrumbs: false
+    },
+    {
+      id: 'sample-page56',
+      title: 'ประวัติส่วนตัว',
       type: 'item',
       url: '/sample-page',
       icon: icons.IconBrandChrome,
