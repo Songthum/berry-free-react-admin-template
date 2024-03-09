@@ -20,6 +20,8 @@ const ChairmanScoreCSB02Page = Loadable(lazy(() => import('views/utilities/Chair
 const ChairmanScoreCSB03Page = Loadable(lazy(() => import('views/utilities/ChairmanScoreCSB03')));
 const DepartmentHeadScoreCSB02Page = Loadable(lazy(() => import('views/utilities/DepartmentHeadScoreCSB02')));
 const DepartmentHeadScoreCSB03Page = Loadable(lazy(() => import('views/utilities/DepartmentHeadScoreCSB03')));
+const RequestAdvisorPage = Loadable(lazy(() => import('views/utilities/RequestAdvisor')));
+
 
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
@@ -140,6 +142,10 @@ const MainRoutes = {
     {
       path: '/utilities/DepartmentHeadScoreCSB03',
       element: <DepartmentHeadScoreCSB03Page />
+    },
+    {
+      path: '/utilities/RequestAdvisor',
+      element: <RequestAdvisorPage />
     },
   ]
 };

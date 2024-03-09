@@ -66,9 +66,9 @@ const utilities = {
     // }
     {
       id: 'sample-page01',
-      title: 'ตรวจสอบคำร้องต่างๆ',
+      title: 'ตรวจสอบคำร้องขอเป็นที่ปรึกษา',
       type: 'item',
-      url: '/sample-page',
+      url: '/utilities/RequestAdvisor',
       icon: icons.IconBrandChrome,
       breadcrumbs: false
     },
