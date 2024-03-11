@@ -71,7 +71,7 @@ const dashboard = {
       id: 'default14',
       title: 'จัดห้องสอบ',
       type: 'item',
-      url: '/dashboard/CSB/ListOfDoc',
+      url: '/dashboard/CSB/ManageExamRoom',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },

@@ -31,13 +31,13 @@ function ManageExamSP() {
     const [timeOff3, setTimeOff3] = useState('');
 
     // State for day fields
-    const [dayOn1, setDayOn1] = useState('');
-    const [dayOn2, setDayOn2] = useState('');
-    const [dayOn3, setDayOn3] = useState('');
+    const [dayOn1, setDayOn1] = useState(null);
+    const [dayOn2, setDayOn2] = useState(null);
+    const [dayOn3, setDayOn3] = useState(null);
 
-    const [dayOff1, setDayOff1] = useState('');
-    const [dayOff2, setDayOff2] = useState('');
-    const [dayOff3, setDayOff3] = useState('');
+    const [dayOff1, setDayOff1] = useState(null);
+    const [dayOff2, setDayOff2] = useState(null);
+    const [dayOff3, setDayOff3] = useState(null);
 
     // Function to handle confirm button click
     const handleConfirm = () => {
@@ -154,12 +154,12 @@ function ManageExamSP() {
                                             <DatePicker
                                                 label="Basic date picker"
                                                 value={dayOn1}
-                                                onChange={(e) => setDayOn1(e.target.value)}
+                                                onChange={(newValue) => setDayOn1(newValue)}
                                             />
                                             <DatePicker
                                                 label="Basic date picker"
                                                 value={dayOff1}
-                                                onChange={(e) => setDayOff1(e.target.value)}
+                                                onChange={(newValue) => setDayOff1(newValue)}
                                             />
                                         </DemoContainer>
                                     </LocalizationProvider>
@@ -256,12 +256,12 @@ function ManageExamSP() {
                                             <DatePicker
                                                 label="Basic date picker"
                                                 value={dayOn2}
-                                                onChange={(e) => setDayOn2(e.target.value)}
+                                                onChange={(newValue) => setDayOn2(newValue)}
                                             />
                                             <DatePicker
                                                 label="Basic date picker"
                                                 value={dayOff2}
-                                                onChange={(e) => setDayOff2(e.target.value)}
+                                                onChange={(newValue) => setDayOff2(newValue)}
                                             />
                                         </DemoContainer>
                                     </LocalizationProvider>
@@ -317,7 +317,7 @@ function ManageExamSP() {
                                         label="Time Field 1"
                                         type="time"
                                         value={timeOn3}
-                                        onChange={(e) => setTimeOn3(e.target.value)}
+                                        onChange={(newValue) => setTimeOn3(newValue)}
                                         // fullWidth
                                         //margin="normal"
                                         InputLabelProps={{

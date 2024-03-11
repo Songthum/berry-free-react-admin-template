@@ -11,6 +11,7 @@ const ListNameStudentS2Page = Loadable(lazy(() => import('views/dashboard/Defaul
 const ListOfDocPage = Loadable(lazy(() => import('views/dashboard/Default/CSB/ListOfDoc')));
 const RemainingStudentsNamePage = Loadable(lazy(() => import('views/dashboard/Default/CSB/RemainingStudentsName')));
 const ManageExamSPPage = Loadable(lazy(() => import('views/dashboard/Default/CSB/ManageExamSP')));
+const ManageExamRoomPage = Loadable(lazy(() => import('views/dashboard/Default/CSB/ManageExamRoom')));
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -180,6 +181,10 @@ const MainRoutes = {
     {
       path: '/dashboard/CSB/ManageExamSP',
       element: <ManageExamSPPage />
+    },
+    {
+      path: '/dashboard/CSB/ManageExamRoom',
+      element: <ManageExamRoomPage />
     },
   ]
 };
