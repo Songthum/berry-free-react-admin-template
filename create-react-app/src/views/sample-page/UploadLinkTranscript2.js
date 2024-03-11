@@ -46,8 +46,8 @@ function UploadLinkTranscript2() {
               <Container>
                 <h1>ตรวจสอบคุณสมบัติยื่นโครงงานพิเศษ 2 (ปริญญานิพนธ์)</h1>
                 <h3>เกณฑ์การประเมิน</h3>
-                <p>1. นักศึกษาโครงการพิเศษสองภาษาต้องลงทะเบียนเรียน 040613142 Special Project II</p>
-                <p>2. นักศึกษาโครงการพิเศษสองภาษาต้องแนบสำเนาหนังสือรับรองการทดสอบโครงงานพิเศษ CSB-04</p>
+                <p>กรณีที่ 1 : นักศึกษาโครงการพิเศษสองภาษาที่ยังไม่เคยลงทะเบียนในรายวิชา Special Project II ต้องแนบลิงค์ไฟล์ &quot;ผลลงทะเบียนเรียน&quot;</p>
+                <p>กรณีที่ 2 : นักศึกษาโครงการพิเศษสองภาษาที่เคยลงทะเบียนเรียน 040613142 Special Project II แล้ว ต้องแนบลิงค์ไฟล์ &quot;เอกสารใบรับรองผลการศึกษา (Transcript)&quot;</p>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Typography
                     sx={{
@@ -55,26 +55,7 @@ function UploadLinkTranscript2() {
                       //marginLeft: 50,
                     }}
                   >
-                    อัปโหลดลิงค์ ผลการลงทะเบียนเรียน
-                  </Typography>
-                  {/* Text Field for Link */}
-                  <TextField
-                    label="Link"
-                    value={linkValue}
-                    onChange={handleLinkChange}
-                    variant="outlined"
-                    sx={{
-                      marginTop: 1,
-                      //marginLeft: 50,
-                    }}
-                  />
-                  <Typography
-                    sx={{
-                      marginTop: 1,
-                      //marginLeft: 50,
-                    }}
-                  >
-                    อัปโหลดลิงค์ สำเนาหนังสือรับรองการทดสอบโครงงานพิเศษ
+                    อัปโหลดลิงค์ ผลการลงทะเบียนเรียน/เอกสารใบรับรองผลการศึกษา (Transcript)
                   </Typography>
                   {/* Text Field for Link */}
                   <TextField

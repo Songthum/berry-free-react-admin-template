@@ -12,7 +12,7 @@ import MainCard from 'ui-component/cards/MainCard';
 import { gridSpacing } from 'store/constant';
 import { Grid } from '@mui/material';
 
-function UploadLinkTranscript() {
+function UploadLinkTranscript1() {
   // State to hold the value of the link
   const [linkValue, setLinkValue] = useState('');
   // State to manage the dialog open/close state
@@ -44,13 +44,20 @@ function UploadLinkTranscript() {
             <Grid item>
               <Grid container direction="column" spacing={1}></Grid>
               <Container>
-                <h1>ตรวจสอบคุณสมบัติยื่นโครงงาน</h1>
-                <p>นักศึกษาโครงการพิเศษสองภาษาต้องลงทะเบียนเรียนวิชา 040613141 Special Project I <br></br>
-                  ได้ผลการเรียนรวม ≥ 102 หน่วยกิต และได้ผลการเรียนรายวิชาภาคฯ 0406xxxxx ≥ 57 หน่วยกิต <br></br>
-                  โดยใช้เอกสารใบรับรองผลการศึกษา (Transcript)</p>
+                <h1>ตรวจสอบคุณสมบัติยื่นโครงงานพิเศษ 2 (ปริญญานิพนธ์)</h1>
+                <h3>เกณฑ์การประเมิน</h3>
+                <p>นักศึกษาโครงการพิเศษสองภาษาต้องลงทะเบียนเรียนวิชา 040613141 Special Project I
+                  ได้ผลการเรียนรวม ≥ 102 หน่วยกิต และได้ผลการเรียนรายวิชาภาคฯ 0406xxxxx ≥ 57 หน่วยกิต
+                  โดยใช้เอกสารใบรับรองผลการศึกษา (Transcript)
+                </p>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Typography>
-                    อัปโหลดลิงค์
+                  <Typography
+                    sx={{
+                      marginTop: 1,
+                      //marginLeft: 50,
+                    }}
+                  >
+                    อัปโหลดลิงค์ ผลการลงทะเบียนเรียน
                   </Typography>
                   {/* Text Field for Link */}
                   <TextField
@@ -58,6 +65,29 @@ function UploadLinkTranscript() {
                     value={linkValue}
                     onChange={handleLinkChange}
                     variant="outlined"
+                    sx={{
+                      marginTop: 1,
+                      //marginLeft: 50,
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      marginTop: 1,
+                      //marginLeft: 50,
+                    }}
+                  >
+                    อัปโหลดลิงค์ เอกสารใบรับรองผลการศึกษา (Transcript)
+                  </Typography>
+                  {/* Text Field for Link */}
+                  <TextField
+                    label="Link"
+                    value={linkValue}
+                    onChange={handleLinkChange}
+                    variant="outlined"
+                    sx={{
+                      marginTop: 1,
+                      marginBottom: 5,
+                    }}
                   />
 
                   {/* Button to Show Popup */}
@@ -84,4 +114,4 @@ function UploadLinkTranscript() {
   );
 }
 
-export default UploadLinkTranscript;
+export default UploadLinkTranscript1;
