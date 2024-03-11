@@ -34,12 +34,12 @@ function InputScoreCSB02() {
 
     const [openDialog, setOpenDialog] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Perform any action with the linkValue, such as redirecting to the provided link
-        // For example: window.location.href = linkValue;
-        setOpenDialog(true);
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     // Perform any action with the linkValue, such as redirecting to the provided link
+    //     // For example: window.location.href = linkValue;
+    //     setOpenDialog(true);
+    // };
 
     // Function to handle closing the dialog
     const handleCloseDialog = () => {
@@ -225,9 +225,9 @@ function InputScoreCSB02() {
                                         marginTop: 3,
                                     }}
                                 >
-                                    <Button variant="contained" onClick={handleSubmit}>
+                                    {/* <Button variant="contained" onClick={handleSubmit}>
                                         บันทึกคะแนน
-                                    </Button>
+                                    </Button> */}
                                 </Stack>
                             </div>
                         </Grid>

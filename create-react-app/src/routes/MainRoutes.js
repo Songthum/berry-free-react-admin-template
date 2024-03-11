@@ -6,6 +6,11 @@ import Loadable from 'ui-component/Loadable';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+const ListNameStudentS1Page = Loadable(lazy(() => import('views/dashboard/Default/CSB/ListNameStudentS1')));
+const ListNameStudentS2Page = Loadable(lazy(() => import('views/dashboard/Default/CSB/ListNameStudentS2')));
+const ListOfDocPage = Loadable(lazy(() => import('views/dashboard/Default/CSB/ListOfDoc')));
+const RemainingStudentsNamePage = Loadable(lazy(() => import('views/dashboard/Default/CSB/RemainingStudentsName')));
+const ManageExamSPPage = Loadable(lazy(() => import('views/dashboard/Default/CSB/ManageExamSP')));
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -21,7 +26,8 @@ const ChairmanScoreCSB03Page = Loadable(lazy(() => import('views/utilities/Chair
 const DepartmentHeadScoreCSB02Page = Loadable(lazy(() => import('views/utilities/DepartmentHeadScoreCSB02')));
 const DepartmentHeadScoreCSB03Page = Loadable(lazy(() => import('views/utilities/DepartmentHeadScoreCSB03')));
 const RequestAdvisorPage = Loadable(lazy(() => import('views/utilities/RequestAdvisor')));
-
+const EvaluateProjectPage = Loadable(lazy(() => import('views/utilities/EvaluateProject')));
+const AppTestPage = Loadable(lazy(() => import('views/utilities/test')));
 
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
@@ -146,6 +152,34 @@ const MainRoutes = {
     {
       path: '/utilities/RequestAdvisor',
       element: <RequestAdvisorPage />
+    },
+    {
+      path: '/utilities/EvaluateProject',
+      element: <EvaluateProjectPage />
+    },
+    {
+      path: '/utilities/AppTest',
+      element: <AppTestPage />
+    },
+    {
+      path: '/dashboard/CSB/ListNameStudentS1',
+      element: <ListNameStudentS1Page />
+    },
+    {
+      path: '/dashboard/CSB/ListNameStudentS2',
+      element: <ListNameStudentS2Page />
+    },
+    {
+      path: '/dashboard/CSB/ListOfDoc',
+      element: <ListOfDocPage />
+    },
+    {
+      path: '/dashboard/CSB/RemainingStudentsName',
+      element: <RemainingStudentsNamePage />
+    },
+    {
+      path: '/dashboard/CSB/ManageExamSP',
+      element: <ManageExamSPPage />
     },
   ]
 };
