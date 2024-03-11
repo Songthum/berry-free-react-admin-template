@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
 // project imports
-import MainLayout from 'layout/MainLayout';
+import TeacherLayout from 'layout/TeacherLayout';
 import Loadable from 'ui-component/Loadable';
 
 // dashboard routing
@@ -40,36 +40,48 @@ const CSB03Page = Loadable(lazy(() => import('views/sample-page/CSB03')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
-const MainRoutes = {
-  path: '/',
-  element: <MainLayout />,
+const TeaherRoutes = {
+  path: '/teacher',
+  element: <TeacherLayout />,
   children: [
     {
-      path: '/dashboard/CSB/ListNameStudentS1',
-      element: <ListNameStudentS1Page />
+      path: 'teacher/utilities/InputScoreCSB02',
+      element: <InputScoreCSB02Page />
     },
     {
-      path: '/dashboard/CSB/ListNameStudentS2',
-      element: <ListNameStudentS2Page />
+      path: 'teacher/utilities/InputScoreCSB03',
+      element: <InputScoreCSB03Page />
+    },
+    {
+      path: 'teacher/utilities/ChairmanScoreCSB02',
+      element: <ChairmanScoreCSB02Page />
+    },
+    {
+      path: 'teacher/utilities/ChairmanScoreCSB03',
+      element: <ChairmanScoreCSB03Page />
+    },
+    {
+      path: 'teacher/utilities/DepartmentHeadScoreCSB02',
+      element: <DepartmentHeadScoreCSB02Page />
+    },
+    {
+      path: 'teacher/utilities/DepartmentHeadScoreCSB03',
+      element: <DepartmentHeadScoreCSB03Page />
+    },
+    {
+      path: 'teacher/utilities/RequestAdvisor',
+      element: <RequestAdvisorPage />
+    },
+    {
+      path: 'teacher/utilities/EvaluateProject',
+      element: <EvaluateProjectPage />
+    },
+    {
+      path: 'teacher/utilities/AppTest',
+      element: <AppTestPage />
     },
 
-    {
-      path: '/dashboard/CSB/ListOfDoc',
-      element: <ListOfDocPage />
-    },
-    {
-      path: '/dashboard/CSB/RemainingStudentsName',
-      element: <RemainingStudentsNamePage />
-    },
-    {
-      path: '/dashboard/CSB/ManageExamSP',
-      element: <ManageExamSPPage />
-    },
-    {
-      path: '/dashboard/CSB/ManageExamRoom',
-      element: <ManageExamRoomPage />
-    },
   ]
 };
 
-export default MainRoutes;
+export default TeaherRoutes;

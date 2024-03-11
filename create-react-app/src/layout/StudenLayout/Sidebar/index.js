@@ -22,6 +22,11 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
   const drawer = (
     <>
+      <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+        <Box sx={{ display: 'flex', p: 2, mx: 'auto' }}>
+          <LogoSection />
+        </Box>
+      </Box>
       <BrowserView>
         <PerfectScrollbar
           component="div"
@@ -32,11 +37,19 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
           }}
         >
           <MenuList />
+          <MenuCard />
+          <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
+            <Chip label={process.env.REACT_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
+          </Stack>
         </PerfectScrollbar>
       </BrowserView>
       <MobileView>
         <Box sx={{ px: 2 }}>
           <MenuList />
+          <MenuCard />
+          <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
+            <Chip label={process.env.REACT_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
+          </Stack>
         </Box>
       </MobileView>
     </>

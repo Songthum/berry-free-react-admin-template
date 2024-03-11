@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
 // project imports
-import MainLayout from 'layout/MainLayout';
+import StudenLayout from 'layout/StudenLayout';
 import Loadable from 'ui-component/Loadable';
 
 // dashboard routing
@@ -40,36 +40,36 @@ const CSB03Page = Loadable(lazy(() => import('views/sample-page/CSB03')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
-const MainRoutes = {
-  path: '/',
-  element: <MainLayout />,
+const StudenRoutes = {
+  path: '/studen',
+  element: <StudenLayout />,
   children: [
     {
-      path: '/dashboard/CSB/ListNameStudentS1',
-      element: <ListNameStudentS1Page />
+      path: 'studen/sample-page',
+      element: <SamplePage />
     },
     {
-      path: '/dashboard/CSB/ListNameStudentS2',
-      element: <ListNameStudentS2Page />
+      path: 'studen/sample-page/UploadLinkTranscript',
+      element: <UploadLinkTranscriptPage />
+    },
+    {
+      path: 'studen/sample-page/CSB01',
+      element: <CSB01Page />
+    },
+    {
+      path: 'studen/sample-page/CSB02',
+      element: <CSB02Page />
+    },
+    {
+      path: 'studen/sample-page/UploadLinkTranscript2',
+      element: <UploadLinkTranscript2Page />
+    },
+    {
+      path: 'studen/sample-page/CSB03',
+      element: <CSB03Page />
     },
 
-    {
-      path: '/dashboard/CSB/ListOfDoc',
-      element: <ListOfDocPage />
-    },
-    {
-      path: '/dashboard/CSB/RemainingStudentsName',
-      element: <RemainingStudentsNamePage />
-    },
-    {
-      path: '/dashboard/CSB/ManageExamSP',
-      element: <ManageExamSPPage />
-    },
-    {
-      path: '/dashboard/CSB/ManageExamRoom',
-      element: <ManageExamRoomPage />
-    },
   ]
 };
 
-export default MainRoutes;
+export default StudenRoutes;

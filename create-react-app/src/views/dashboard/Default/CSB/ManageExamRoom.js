@@ -247,7 +247,7 @@ const ManageExamRoom = () => {
                                                 id={`time-${index}`}
                                                 type="time"
                                                 value={timeOn1[index]}
-                                                onChange={(e, i) => setTimeOn1(e.target.value(i))}
+                                                onChange={(newValue) => setTimeOn1(newValue)}
                                                 InputLabelProps={{
                                                     shrink: true,
                                                 }}
