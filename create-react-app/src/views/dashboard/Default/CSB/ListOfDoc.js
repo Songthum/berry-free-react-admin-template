@@ -4,6 +4,8 @@ import { Grid } from '@mui/material';
 import MainCard from 'ui-component/cards/MainCard';
 import { gridSpacing } from 'store/constant';
 
+//เปลี่ยนไฟล์นี้ให้เป็นไฟล์คลังข้อสอบแทน แต่เดี๋ยวค่อบทำเอาอันหลักก่อน
+
 const List_of_doc = () => {
     return (
         <MainCard>
@@ -13,6 +15,7 @@ const List_of_doc = () => {
                         <Grid item>
                             <Grid container direction="column" spacing={1}></Grid>
                             <div style={{ textAlign: 'center', marginTop: '50px' }}>
+                                <h1>เปลี่ยนไฟล์นี้ให้เป็นไฟล์คลังข้อสอบแทน แต่เดี๋ยวค่อบทำเอาอันหลักก่อน !!!</h1>
                                 <h2>เอกสารที่ยังไม่ได้ตรวจสอบ</h2>
 
                                 <TableContainer component={Paper} style={{ marginTop: '20px' }}>

@@ -61,7 +61,7 @@ function CSB01() {
                                 noValidate
                                 autoComplete="off"
                             >
-                                <Grid container alignItems="center" justifyContent="center">
+                                <Grid container alignItems="center" justifyContent="center" sx={{ml:20}}>
                                     <Grid item>
                                         <Stack alignItems="center" justifyContent="center" spacing={1}>
                                             <Typography fontSize='18px'>
@@ -76,104 +76,107 @@ function CSB01() {
                                         </Stack>
                                     </Grid>
                                 </Grid>
-                                <div>
-                                    <Typography
-                                        fontSize='18px'
-                                        sx={{
-                                            marginTop: 5,
-                                            marginLeft: 50,
+                                <Grid>
+                                    <Stack alignItems="center" justifyContent="center" spacing={1} sx={{mt:5, ml:35}}>
+                                        <Typography
+                                            fontSize='18px'
+                                            // sx={{
+                                            //     marginTop: 5,
+                                            //     marginLeft: 50,
 
-                                        }}>
-                                        รหัสนักศึกษา คนที่ 1
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        ชื่อ - สกุล คนที่ 1
-                                        <Box
-                                            sx={{
-                                                minWidth: 180,
-                                                marginTop: 1,
-                                                marginLeft: 3,
-                                                display: "flex",
-                                            }}
+                                            // }}
                                         >
-                                            <FormControl
+                                            รหัสนักศึกษา คนที่ 1
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            ชื่อ - สกุล คนที่ 1
+                                            <Box
                                                 sx={{
                                                     minWidth: 180,
-                                                    marginRight: 33,
-                                                }}>
-                                                <InputLabel id="StudentID-select-label">StudentID</InputLabel>
-                                                <Select
-                                                    labelId="StudentID-select-label"
-                                                    id="StudentID-select"
-                                                    value={StudentID}
-                                                    label="StudentID"
-                                                    onChange={handleChange}
-                                                >
-                                                    <MenuItem value={13}>6304062620061</MenuItem>
-                                                    <MenuItem value={13}>6304062620077</MenuItem>
-                                                    <MenuItem value={13}>6304062620023</MenuItem>
-                                                </Select>
-                                            </FormControl>
-                                            <TextField
-                                                disabled
-                                                id="Name"
-                                                label="ชื่อ - สกุล"
-                                                defaultValue="ชื่อ - สกุล" //ชื่อจะดึงข้อมูลมาจากรหัสนักศึกษา
-                                            />
-                                        </Box>
-                                    </Typography>
-                                    <Typography
-                                        fontSize='18px'
-                                        sx={{
-                                            marginTop: 5,
-                                            marginLeft: 50,
-
-                                        }}>
-                                        รหัสนักศึกษา คนที่ 2
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        ชื่อ - สกุล คนที่ 2
-                                        <Box
+                                                    marginTop: 1,
+                                                    marginLeft: 3,
+                                                    display: "flex",
+                                                }}
+                                            >
+                                                <FormControl
+                                                    sx={{
+                                                        minWidth: 180,
+                                                        marginRight: 33,
+                                                    }}>
+                                                    <InputLabel id="StudentID-select-label-1">รหัสนักศึกษา</InputLabel>
+                                                    <Select
+                                                        labelId="StudentID-select-label-1"
+                                                        id="StudentID-select"
+                                                        value={StudentID}
+                                                        label="รหัสนักศึกษา"
+                                                        onChange={handleChange}
+                                                    >
+                                                        <MenuItem value={13}>6304062620061</MenuItem>
+                                                        <MenuItem value={13}>6304062620077</MenuItem>
+                                                        <MenuItem value={13}>6304062620023</MenuItem>
+                                                    </Select>
+                                                </FormControl>
+                                                <TextField
+                                                    disabled
+                                                    id="Name"
+                                                    label="ชื่อ - สกุล"
+                                                    defaultValue="ชื่อ - สกุล" //ชื่อจะดึงข้อมูลมาจากรหัสนักศึกษา
+                                                />
+                                            </Box>
+                                        </Typography>
+                                        <Typography
+                                            fontSize='18px'
                                             sx={{
-                                                minWidth: 180,
-                                                marginTop: 1,
-                                                marginLeft: 3,
-                                                display: "flex",
-                                            }}
-                                        >
-                                            <FormControl
+                                                marginTop: 5,
+                                                marginLeft: 50,
+
+                                            }}>
+                                            รหัสนักศึกษา คนที่ 2
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            ชื่อ - สกุล คนที่ 2
+                                            <Box
                                                 sx={{
                                                     minWidth: 180,
-                                                    marginRight: 33,
-                                                }}>
-                                                <InputLabel id="StudentID-select-label">StudentID</InputLabel>
-                                                <Select
-                                                    labelId="StudentID-select-label"
-                                                    id="StudentID-select"
-                                                    value={StudentID}
-                                                    label="StudentID"
-                                                    onChange={handleChange}
-                                                >
-                                                    <MenuItem value={13}>6304062620061</MenuItem>
-                                                    <MenuItem value={13}>6304062620077</MenuItem>
-                                                    <MenuItem value={13}>6304062620023</MenuItem>
-                                                </Select>
-                                            </FormControl>
-                                            <TextField
-                                                disabled
-                                                id="Name"
-                                                label="ชื่อ - สกุล"
-                                                defaultValue="ชื่อ - สกุล" //ชื่อจะดึงข้อมูลมาจากรหัสนักศึกษา
-                                            />
-                                        </Box>
-                                    </Typography>
-                                </div>
+                                                    marginTop: 1,
+                                                    marginLeft: 3,
+                                                    display: "flex",
+                                                }}
+                                            >
+                                                <FormControl
+                                                    sx={{
+                                                        minWidth: 180,
+                                                        marginRight: 33,
+                                                    }}>
+                                                    <InputLabel id="StudentID-select-label-2">รหัสนักศึกษา</InputLabel>
+                                                    <Select
+                                                        labelId="StudentID-select-label-2"
+                                                        id="StudentID-select"
+                                                        value={StudentID}
+                                                        label="รหัสนักศึกษา"
+                                                        onChange={handleChange}
+                                                    >
+                                                        <MenuItem value={13}>6304062620061</MenuItem>
+                                                        <MenuItem value={13}>6304062620077</MenuItem>
+                                                        <MenuItem value={13}>6304062620023</MenuItem>
+                                                    </Select>
+                                                </FormControl>
+                                                <TextField
+                                                    disabled
+                                                    id="Name"
+                                                    label="ชื่อ - สกุล"
+                                                    defaultValue="ชื่อ - สกุล" //ชื่อจะดึงข้อมูลมาจากรหัสนักศึกษา
+                                                />
+                                            </Box>
+                                        </Typography>
+                                    </Stack>
+                                </Grid>
                                 <div>
                                     <Typography
                                         fontSize='18px'
@@ -315,6 +318,7 @@ function CSB01() {
                                         fontSize='18px'
                                         sx={{
                                             marginTop: 5,
+                                            marginLeft: 45
                                         }}
                                     >
                                         <Button variant="contained" onClick={handleSubmit}>

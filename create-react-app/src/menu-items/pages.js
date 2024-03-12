@@ -48,21 +48,21 @@ const pages = {
           id: 'login3', //สร้างไอดีใหม่ด้วยนะ
           title: 'ตรวจสอบคุณสมบัติยื่นสอบ Special Project 1',
           type: 'item',
-          url: '/sample-page/UploadLinkTranscript', 
-          target: false
+          url: '/sample-page/UploadLinkTranscript',
+          target: false,
         },
         {
           id: 'register3', //สร้างไอดีใหม่ด้วยนะ
           title: 'ยื่นสอบหัวข้อ(CSB01)',
           type: 'item',
-          url: '/sample-page/CSB01', 
+          url: '/sample-page/CSB01',
           target: false
         },
         {
           id: 'register32', //สร้างไอดีใหม่ด้วยนะ
           title: 'ยื่นสอบก้าวหน้า(CSB02)',
           type: 'item',
-          url: '/sample-page/CSB02', 
+          url: '/sample-page/CSB02',
           target: false
         }
       ]
@@ -78,14 +78,14 @@ const pages = {
           id: 'login31', //สร้างไอดีใหม่ด้วยนะ
           title: 'ตรวจสอบคุณสมบัติยื่นสอบ Special Project 2',
           type: 'item',
-          url: '/sample-page/UploadLinkTranscript2', 
+          url: '/sample-page/UploadLinkTranscript2',
           target: false
         },
         {
           id: 'register33', //สร้างไอดีใหม่ด้วยนะ
           title: 'ยื่นสอบป้องกัน(CSB03)',
           type: 'item',
-          url: '/sample-page/CSB03', 
+          url: '/sample-page/CSB03',
           target: false
         }
       ]
