@@ -41,32 +41,32 @@ const CSB03Page = Loadable(lazy(() => import('views/sample-page/CSB03')));
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: '/',
+  path: '/staff',
   element: <MainLayout />,
   children: [
     {
-      path: '/dashboard/CSB/ListNameStudentS1',
+      path: 'staff/dashboard/CSB/ListNameStudentS1',
       element: <ListNameStudentS1Page />
     },
     {
-      path: '/dashboard/CSB/ListNameStudentS2',
+      path: 'staff/dashboard/CSB/ListNameStudentS2',
       element: <ListNameStudentS2Page />
     },
 
     {
-      path: '/dashboard/CSB/ListOfDoc',
+      path: 'staff/dashboard/CSB/ListOfDoc',
       element: <ListOfDocPage />
     },
     {
-      path: '/dashboard/CSB/RemainingStudentsName',
+      path: 'staff/dashboard/CSB/RemainingStudentsName',
       element: <RemainingStudentsNamePage />
     },
     {
-      path: '/dashboard/CSB/ManageExamSP',
+      path: 'staff/dashboard/CSB/ManageExamSP',
       element: <ManageExamSPPage />
     },
     {
-      path: '/dashboard/CSB/ManageExamRoom',
+      path: 'staff/dashboard/CSB/ManageExamRoom',
       element: <ManageExamRoomPage />
     },
   ]

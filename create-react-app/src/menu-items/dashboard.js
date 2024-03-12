@@ -22,7 +22,7 @@ const dashboard = {
           id: 'login3', //สร้างไอดีใหม่ด้วยนะ
           title: 'รายชื่อนักศึกษา CSB',
           type: 'item',
-          url: '/dashboard/CSB/ListNameStudentS1',
+          url: 'staff/dashboard/CSB/ListNameStudentS1',
           target: false
         }
       ]
@@ -38,7 +38,7 @@ const dashboard = {
           id: 'login3', //สร้างไอดีใหม่ด้วยนะ
           title: 'รายชื่อนักศึกษา CSB',
           type: 'item',
-          url: '/dashboard/CSB/ListNameStudentS2',
+          url: 'staff/dashboard/CSB/ListNameStudentS2',
           target: false
         }
       ]
@@ -47,7 +47,7 @@ const dashboard = {
       id: 'default11',
       title: 'เอกสารที่ยังไม่ได้ตรวจสอบ',
       type: 'item',
-      url: '/dashboard/CSB/ListOfDoc',
+      url: 'staff/dashboard/CSB/ListOfDoc',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },
@@ -55,7 +55,7 @@ const dashboard = {
       id: 'default12',
       title: 'รายชื่อนักศึกษาตกค้าง',
       type: 'item',
-      url: '/dashboard/CSB/RemainingStudentsName',
+      url: 'staff/dashboard/CSB/RemainingStudentsName',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },
@@ -63,7 +63,7 @@ const dashboard = {
       id: 'default13',
       title: 'จัดการการยื่นสอบ',
       type: 'item',
-      url: '/dashboard/CSB/ManageExamSP',
+      url: 'staff/dashboard/CSB/ManageExamSP',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },
@@ -71,7 +71,7 @@ const dashboard = {
       id: 'default14',
       title: 'จัดห้องสอบ',
       type: 'item',
-      url: '/dashboard/CSB/ManageExamRoom',
+      url: 'staff/dashboard/CSB/ManageExamRoom',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },
@@ -79,15 +79,7 @@ const dashboard = {
       id: 'default15',
       title: 'พิมพ์เอกสาร',
       type: 'item',
-      url: '/dashboard/CSB/ListOfDoc',
-      icon: icons.IconDashboard,
-      breadcrumbs: false
-    },
-    {
-      id: 'default',
-      title: 'Dashboard',
-      type: 'item',
-      url: '/',
+      url: 'staff/dashboard/CSB/ListOfDoc',
       icon: icons.IconDashboard,
       breadcrumbs: false
     },
