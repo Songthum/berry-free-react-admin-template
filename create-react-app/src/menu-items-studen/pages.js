@@ -94,7 +94,7 @@ const pages = {
       id: 'sample-page',
       title: 'ตรวจสอบสถานะต่างๆ',
       type: 'item',
-      url: 'studen/sample-page',
+      url: 'studen/sample-page/CheckAllStatus',
       icon: icons.IconBrandChrome,
       breadcrumbs: false
     },

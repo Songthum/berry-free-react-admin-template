@@ -72,27 +72,7 @@ function UploadLinkTranscript1() {
                     }}
                     fontSize={'18px'}
                   >
-                    อัปโหลดไฟล์ ผลการลงทะเบียนเรียน
-                  </Typography>
-                  <Button
-                    component="label"
-                    role={undefined}
-                    variant="contained"
-                    tabIndex={-1}
-                    startIcon={<CloudUploadIcon />}
-                    sx={{ maxWidth: 180, m: 2 }}
-                  >
-                    Upload file
-                    <VisuallyHiddenInput type="file" />
-                  </Button>
-                  <Typography
-                    sx={{
-                      marginTop: 1,
-                      //marginLeft: 50,
-                    }}
-                    fontSize={'18px'}
-                  >
-                    อัปโหลดไฟล์ เอกสารใบรับรองผลการศึกษา (Transcript)
+                    อัปโหลดไฟล์ผลการเรียนจากเว็บไซต์ reg kmutnb
                   </Typography>
                   <Button
                     component="label"

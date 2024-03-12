@@ -11,6 +11,8 @@ import { Typography } from '@mui/material';
 import MainCard from 'ui-component/cards/MainCard';
 import { gridSpacing } from 'store/constant';
 import { Grid } from '@mui/material';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { styled } from '@mui/material/styles';
 
 function UploadLinkTranscript2() {
   // State to hold the value of the link
@@ -36,6 +38,18 @@ function UploadLinkTranscript2() {
     setOpenDialog(false);
   };
 
+  const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+  });
+
   return (
     <MainCard>
       <Grid container spacing={gridSpacing}>
@@ -54,23 +68,27 @@ function UploadLinkTranscript2() {
                       marginTop: 1,
                       //marginLeft: 50,
                     }}
+                    fontSize={'18px'}
                   >
-                    อัปโหลดลิงค์ ผลการลงทะเบียนเรียน/เอกสารใบรับรองผลการศึกษา (Transcript)
+                    อัปโหลดไฟล์ผลการเรียนจากเว็บไซต์ reg kmutnb
                   </Typography>
                   {/* Text Field for Link */}
-                  <TextField
-                    label="Link"
-                    value={linkValue}
-                    onChange={handleLinkChange}
-                    variant="outlined"
-                    sx={{
-                      marginTop: 1,
-                      marginBottom: 5,
-                    }}
-                  />
+                  <Button
+                    component="label"
+                    role={undefined}
+                    variant="contained"
+                    tabIndex={-1}
+                    startIcon={<CloudUploadIcon />}
+                    sx={{ maxWidth: 180, m: 2 }}
+                  >
+                    Upload file
+                    <VisuallyHiddenInput type="file" />
+                  </Button>
 
-                  {/* Button to Show Popup */}
-                  <Button variant="contained" onClick={handleSubmit}>ยืนยัน</Button>
+                  <Grid sx={{ textAlign: 'center' }}>
+                    {/* Button to Show Popup */}
+                    <Button variant="contained" onClick={handleSubmit} sx={{ maxWidth: 100 }}>ตรวจสอบ</Button>
+                  </Grid>
                 </Box>
 
                 {/* Dialog Popup */}
