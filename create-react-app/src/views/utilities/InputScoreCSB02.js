@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Select from '@mui/material/Select';
@@ -57,6 +57,42 @@ function InputScoreCSB02() {
         { name: 'คะแนนรวม', fullscores: '90', score: '' }, //ระบบต้องคำนวณคะแนนออกมา
         // Add more data as needed
     ];
+
+    const [project, setProject] = useState([]);
+    const [Getname, setGetname] = useState([]);
+    const [Getname2, setGetname2] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const project = await axios.get('http://localhost:8001/  ');
+                setProject(Getname.data);
+                const Getname = await axios.get('http://localhost:8001/  ');
+                setGetname(Getname.data);
+                const Getname2 = await axios.get('http://localhost:8001/  ');
+                setGetname2(Getname.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const [ISCSB02, setISCSB02] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.post('http://localhost:9999/ISCSB02');
+                setISCSB02(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <MainCard>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
@@ -49,6 +49,21 @@ function UploadLinkTranscript1() {
     whiteSpace: 'nowrap',
     width: 1,
   });
+
+  const [Transcript, setTranscript] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.post('http://localhost:9999/Transcript');
+                setTranscript(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
   return (
     <MainCard>
@@ -102,6 +117,9 @@ function UploadLinkTranscript1() {
                     <Button onClick={handleCloseDialog}>Close</Button>
                   </DialogActions>
                 </Dialog>
+
+                  {/* post ต้องทำเพิ่ม */}
+
               </Container>
             </Grid>
           </Grid>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import MainCard from 'ui-component/cards/MainCard';
@@ -17,6 +17,21 @@ function ListNameStudentS2() {
         console.log(`Button clicked for item with id ${id}`);
         // window.location.href = "https://example.com"; // Uncomment to redirect to a URL
     };
+
+    const [NAMES2, setNameS2] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:9999/NAMES2');
+                setNameS2(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <MainCard>

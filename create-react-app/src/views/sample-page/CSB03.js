@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import { Button, Grid } from '@mui/material';
 import MainCard from 'ui-component/cards/MainCard';
@@ -18,6 +18,22 @@ const CSB03 = () => {
         // เมื่อคลิกที่ปุ่ม "ยินยอม"
         // ทำสิ่งที่ต้องการเมื่อคลิกที่ปุ่มยินยอมที่นี่
     };
+
+    const [CSB03, setCSB03] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.post('http://localhost:9999/CSB03');
+                setCSB03(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <MainCard>
             <Grid container spacing={gridSpacing}>

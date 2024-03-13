@@ -15,11 +15,19 @@ import MainCard from 'ui-component/cards/MainCard';
 import { gridSpacing } from 'store/constant';
 
 function EvaluateProject() {
+<<<<<<< Updated upstream
   const [tableData, setTableData] = useState([
     { id: 1, name: 'จัดการการสอบโครงงานพิเศษ', link: 'path/to/file1.txt', status: 'CSB03', isDisabled: false, isRed: false },
     { id: 2, name: 'จัดการการยื่นจบการศึกษา', link: 'path/to/file2.txt', status: 'CSB03', isDisabled: false, isRed: false },
     { id: 3, name: 'จัดการการใช้บริการฟิตเนส', link: 'path/to/file3.txt', status: 'CSB02', isDisabled: false, isRed: false }
   ]);
+=======
+    const [tableData, setTableData] = useState([
+        { id: 1, name: 'จัดการการสอบโครงงานพิเศษสอบหัวข้อ', link: 'path/to/file1.txt', status: 'CSB01', isDisabled: false, isRed: false },
+        { id: 2, name: 'จัดการการยื่นจบการศึกษาสอบก้าวหน้า', link: 'path/to/file2.txt', status: 'CSB02', isDisabled: false, isRed: false },
+        { id: 3, name: 'จัดการการใช้บริการฟิตเนสสอบป้องกัน', link: 'path/to/file3.txt', status: 'CSB03', isDisabled: false, isRed: false }
+    ]);
+>>>>>>> Stashed changes
 
   const [openPopup, setOpenPopup] = useState(false);
   const [selectedRow, setSelectedRow] = useState(null);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TableContainer from '@mui/material/TableContainer';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
@@ -23,6 +23,21 @@ function CheckAllStatus() {
     // Add more data as needed
   ];
 
+  const [CheckAllStatus, setCheckAllStatus] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('http://localhost:8001/CheckAllStatus');
+                setCheckAllStatus(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
   return (
     <div>
       <h1>ตรวจสอบสถานะต่างๆ</h1>
@@ -44,9 +59,16 @@ function CheckAllStatus() {
                 <TableCell>{item.name}</TableCell>
                 <TableCell>{item.status}</TableCell>
                 <TableCell>{item.remark}</TableCell>
+                {CheckAllStatus.map((CheckAllStatus, index) => (
+                                <tr key={index}>
+                                    <td>{CheckAllStatus.fi_id}</td>
+                                    <td>{CheckAllStatus.gd_status}</td>
+                                </tr>
+                            ))}
               </TableRow>
             ))}
           </TableBody>
+
         </Table>
       </TableContainer>
     </div>

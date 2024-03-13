@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
@@ -49,6 +49,21 @@ function UploadLinkTranscript2() {
     whiteSpace: 'nowrap',
     width: 1,
   });
+
+  const [Transcript2, setTranscript2] = useState([]);
+
+  useEffect(() => {
+      const fetchData = async () => {
+          try {
+              const response = await axios.post('http://localhost:9999/Transcript2');
+              setTranscript2(response.data);
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      };
+
+      fetchData();
+  }, []);
 
   return (
     <MainCard>
